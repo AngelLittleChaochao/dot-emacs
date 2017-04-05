@@ -1,0 +1,14 @@
+{
+    "author": "Chaochao Tang <chaotang0281@gmail.com>",
+    "name": "emacs-js-dependency",
+    "description": "nodejs module for chaochao .emacs",
+    "version": "0.0.0",
+    "dependencies": {
+        "js-beautify": "^1.5.10"
+    },
+    "devDependencies": {},
+    "optionalDependencies": {},
+    "engines": {
+        "node": "*"
+    }
+}

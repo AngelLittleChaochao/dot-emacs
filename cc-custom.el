@@ -3,8 +3,6 @@
 
 (require 'csharp-mode)
 (require 'yaml-mode)
-(require 'js2-mode)
-(require 'json-mode)
 
 
 (require 'yasnippet)

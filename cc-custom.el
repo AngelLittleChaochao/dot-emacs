@@ -2,8 +2,8 @@
 (add-to-list 'load-path "~/etc/el/")
 
 
-;;(require 'yasnippet)
-;;(yas-global-mode 1)
+(require 'yasnippet)
+(yas-global-mode 1)
 
 (require 'ido)
 (ido-mode t)

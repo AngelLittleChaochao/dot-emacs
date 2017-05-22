@@ -1,6 +1,3 @@
-(add-to-list 'load-path "~/etc/el/web-beautify.el")
-
-
 ;; beautify js/html/css
 (require 'web-beautify) ;; Not necessary if using ELPA package
 (eval-after-load 'js2-mode

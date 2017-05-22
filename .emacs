@@ -5,6 +5,7 @@
 (global-set-key "\C-c\C-k" 'copy-line)
 (global-set-key "\C-c\C-c" 'comment-region)
 (global-set-key "\C-c\C-u" 'uncomment-region)
+(global-set-key "\M-s" 'eshell)
 
 
 (global-set-key (kbd "C-x C-b") 'ibuffer)

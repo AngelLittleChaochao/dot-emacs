@@ -1,8 +1,11 @@
 (add-to-list 'load-path "~/etc/el/vendor")
+(add-to-list 'load-path "~/etc/el/vendor/js2-mode-20170116")
+
 (add-to-list 'load-path "~/etc/el/")
 
 (require 'csharp-mode)
 (require 'yaml-mode)
+(require 'js2-mode)
 
 
 (require 'yasnippet)

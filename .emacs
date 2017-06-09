@@ -37,7 +37,8 @@
 (add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
 (add-to-list 'auto-mode-alist '("\\.yaml\\'" . yaml-mode))
 (add-to-list 'auto-mode-alist '("\\.cs\\'" . csharp-mode))
-
+(add-to-list 'auto-mode-alist '("\\.lua" . lua-mode))
+(add-to-list 'interpreter-mode-alist '("lua" . lua-mode))
 
 
 (defun set-newline-and-indent ()

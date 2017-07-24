@@ -6,6 +6,8 @@
 (global-set-key "\C-c\C-c" 'comment-region)
 (global-set-key "\C-c\C-u" 'uncomment-region)
 (global-set-key "\M-s" 'eshell)
+(global-set-key "\C-cr" 'replace-string)
+(global-set-key "\C-cq" 'query-replace)
 
 
 (global-set-key (kbd "C-x C-b") 'ibuffer)

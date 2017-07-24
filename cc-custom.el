@@ -4,6 +4,10 @@
 
 (add-to-list 'load-path "~/etc/el/")
 
+;; load js configuration file
+(load-file "~/etc/el/cc-js.el")
+
+
 (require 'csharp-mode)
 (require 'yaml-mode)
 (require 'js2-mode)

@@ -41,6 +41,9 @@
 (add-to-list 'auto-mode-alist '("\\.cs\\'" . csharp-mode))
 (add-to-list 'auto-mode-alist '("\\.lua" . lua-mode))
 (add-to-list 'interpreter-mode-alist '("lua" . lua-mode))
+(add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
+(add-to-list 'auto-mode-alist '("README\\.md\\'" . gfm-mode))
 
 
 (defun set-newline-and-indent ()

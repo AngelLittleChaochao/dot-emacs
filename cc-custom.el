@@ -12,7 +12,7 @@
 (require 'yaml-mode)
 (require 'js2-mode)
 (require 'lua-mode)
-
+(require 'markdown-mode)
 
 (require 'yasnippet)
 (yas-global-mode 1)
@@ -27,4 +27,9 @@
   )
 
 (add-hook 'csharp-mode-hook 'my-csharp-mode-hook)
+
+(autoload 'markdown-mode "markdown-mode"
+   "Major mode for editing Markdown files" t)
+(autoload 'gfm-mode "markdown-mode"
+   "Major mode for editing GitHub Flavored Markdown files" t)
 

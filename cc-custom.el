@@ -1,6 +1,7 @@
 (add-to-list 'load-path "~/etc/el/vendor")
 (add-to-list 'load-path "~/etc/el/vendor/lua-mode")
 (add-to-list 'load-path "~/etc/el/vendor/js2-mode-20170116")
+(add-to-list 'load-path "~/etc/el/vendor/yasnippet")
 
 (add-to-list 'load-path "~/etc/el/")
 

@@ -22,3 +22,14 @@ For Ubuntu, apt-get install markdown
 Of course, you’re not out of the woods yet. Emacs has no idea what to do with the Markdown file. If you try to compile your new document with C-c C-c m then you get a lovely error message that says /bin/bash: markdown: command not found. Well, first you have to install rdiscount with gem gem install rdiscount (You can learn how to set up a ruby environment from Lennu.net). Now that you’ve installed Rdiscount, go back into Emacs and enter in the buffer M-x customize-mode hit Return, then markdown-mode From there a GUI appears. Search for Markdown Command: and enter in rdiscount. Save your changes, and test out your markdown-mode compilation again.
 
 ## yasnippet
+
+## ipython install
+
+```
+	$ pip install ipython
+	Install and register an IPython kernel with Jupyter:
+	
+	$ python -m pip install ipykernel
+	
+	$ python -m ipykernel install [--user] [--name <machine-readable-name>] [--display-name <]
+```

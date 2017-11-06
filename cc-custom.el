@@ -3,6 +3,9 @@
 (add-to-list 'load-path "~/etc/el/vendor/js2-mode-20170116")
 (add-to-list 'load-path "~/etc/el/vendor/yasnippet")
 
+(setq py-install-directory "~/etc/el/vendor/python-mode/")
+(add-to-list 'load-path "~/etc/el/vendor/python-mode")
+
 (add-to-list 'load-path "~/etc/el/")
 
 ;; load js configuration file
@@ -20,6 +23,8 @@
 
 (require 'ido)
 (ido-mode t)
+
+(require 'python-mode)
 
 (defun my-csharp-mode-hook ()
   ;; enable the stuff you want for C# here

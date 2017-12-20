@@ -30,7 +30,9 @@
   ;; enable the stuff you want for C# here
   (electric-pair-mode 1)       ;; Emacs 24
   (electric-pair-local-mode 1) ;; Emacs 25
-  )
+  (turn-on-auto-revert-mode)
+  (setq indent-tabs-mode nil)
+)
 
 (add-hook 'csharp-mode-hook 'my-csharp-mode-hook)
 

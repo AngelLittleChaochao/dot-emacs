@@ -21,8 +21,8 @@
 (require 'org)
 (define-key global-map "\C-cl" 'org-store-link)
 (define-key global-map "\C-ca" 'org-agenda)
-(define-key org-mode-map "\C-i" 'org-clock-in)
-(define-key org-mode-map "\C-o" 'org-clock-out)
+(define-key org-mode-map "\C-ci" 'org-clock-in)
+(define-key org-mode-map "\C-co" 'org-clock-out)
 
 (setq org-clock-persist 'history)
 (org-clock-persistence-insinuate)
@@ -30,8 +30,6 @@
 (setq org-clock-into-drawer nil)
 
 (setq org-agenda-files (list "~/org/work.org" "~/org/home.org"))
-
-
 (load-file "~/etc/el/cc-custom.el")
 
 
@@ -80,3 +78,4 @@
       (kill-ring-save (line-beginning-position)
                       (line-beginning-position (+ 1 arg)))
       (message "%d line%s copied" arg (if (= 1 arg) "" "s")))
+(put 'upcase-region 'disabled nil)

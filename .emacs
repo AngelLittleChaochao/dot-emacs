@@ -8,7 +8,7 @@
 (global-set-key "\M-s" 'eshell)
 (global-set-key "\C-cr" 'replace-string)
 (global-set-key "\C-cq" 'query-replace)
-
+(global-set-key "\M-o" 'smart-open-line-above)
 
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 (autoload 'ibuffer "ibuffer" "List buffers." t)
@@ -69,6 +69,8 @@
 (column-number-mode t)
 (size-indication-mode t)
 (electric-pair-mode 1)
+(delete-selection-mode 1)
+
 
 
 ;; set copy line key
@@ -79,3 +81,12 @@
                       (line-beginning-position (+ 1 arg)))
       (message "%d line%s copied" arg (if (= 1 arg) "" "s")))
 (put 'upcase-region 'disabled nil)
+
+(defun smart-open-line-above ()
+  "Insert an empty line above the current line.
+Position the cursor at it's beginning, according to the current mode."
+  (interactive)
+  (move-beginning-of-line nil)
+  (newline-and-indent)
+  (forward-line -1)
+  (indent-according-to-mode))

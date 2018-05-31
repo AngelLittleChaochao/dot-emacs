@@ -30,8 +30,13 @@
 (setq org-clock-into-drawer nil)
 
 (setq org-agenda-files (list "~/org/work.org" "~/org/home.org"))
-(load-file "~/etc/el/cc-custom.el")
 
+;; ADD emacs org load path
+(add-to-list 'load-path "/usr/local/share/emacs/25.1/lisp")
+(require 'ob-octave)
+
+
+(load-file "~/etc/el/cc-custom.el")
 
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
 (add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
@@ -43,7 +48,7 @@
 (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
 (add-to-list 'auto-mode-alist '("README\\.md\\'" . gfm-mode))
 (add-to-list 'auto-mode-alist '("\\.py\\'" . python-mode))
-
+(add-to-list 'auto-mode-alist '("\\.m\\'" . octave-mode))
 
 (defun set-newline-and-indent ()
     (local-set-key (kbd "RET") 'newline-and-indent))
@@ -61,6 +66,14 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+(add-hook 'octave-mode-hook
+          (lambda ()
+            (abbrev-mode 1)
+            (auto-fill-mode 1)
+            (if (eq window-system 'x)
+                (font-lock-mode 1))))
+
 
 (show-paren-mode 1)
 (menu-bar-mode -1) 

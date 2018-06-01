@@ -84,6 +84,8 @@
 (electric-pair-mode 1)
 (delete-selection-mode 1)
 
+;; code style
+(set-face-foreground 'font-lock-comment-face "gray")
 
 
 ;; set copy line key

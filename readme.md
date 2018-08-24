@@ -6,6 +6,15 @@ emacs version >= 25.1 (js2 mode, Dired mode, IDO)
 For js auto beautify, install:
 js-beautify
 
+## python auto beauty
+Using py-yapf is convinent that default python mode. It needs first install pypf, then load py-yapf.el file.
+
+[py-yapf](https://github.com/paetzke/py-yapf.el)
+
+Another configure python environment configure is [elpy](https://github.com/paetzke/py-yapf.el), it needs more commands and I haven't tried yet.
+
+In MaxOS, after using 'pip install yapf', yapf command still not found. It is because the python installed path is not included in environment PATH. In MacOS, default python binary path is like /Library/Frameworks/Python.framework/Versions/3.5/bin
+
 ## markdown mode
 For markdown mode, install markdown command.
 For Ubuntu, apt-get install markdown

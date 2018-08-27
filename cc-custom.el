@@ -16,6 +16,10 @@
 (require 'yaml-mode)
 (require 'js2-mode)
 (require 'lua-mode)
+(setq lua-indent-level 2)
+
+(setq lua-indent-string-contents t)
+
 (require 'markdown-mode)
 
 (require 'yasnippet)

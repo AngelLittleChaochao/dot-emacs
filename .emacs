@@ -87,8 +87,7 @@
 (delete-selection-mode 0)
 
 ;; code style
-(set-face-foreground 'font-lock-comment-face "dark gray")
-
+(set-face-foreground 'font-lock-comment-face "#949494")
 
 ;; set copy line key
  (defun copy-line (arg)

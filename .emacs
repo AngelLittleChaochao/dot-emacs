@@ -5,10 +5,12 @@
 (global-set-key "\C-c\C-k" 'copy-line)
 (global-set-key "\C-c\C-c" 'comment-region)
 (global-set-key "\C-c\C-u" 'uncomment-region)
+(global-set-key "\C-c\C-r" 'revert-buffer)
 (global-set-key "\M-s" 'eshell)
 (global-set-key "\C-cr" 'replace-string)
 (global-set-key "\C-cq" 'query-replace)
 (global-set-key "\M-o" 'smart-open-line-above)
+
 
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 (autoload 'ibuffer "ibuffer" "List buffers." t)
@@ -30,6 +32,7 @@
 (setq org-clock-into-drawer nil)
 
 (setq org-agenda-files (list "~/org/work.org" "~/org/home.org"))
+(setq org-latex-create-formula-image-program 'dvipng)
 
 ;; ADD emacs org load path
 (add-to-list 'load-path "/usr/local/share/emacs/25.1/lisp")
@@ -43,7 +46,6 @@
 (add-to-list 'auto-mode-alist '("\\.yaml\\'" . yaml-mode))
 (add-to-list 'auto-mode-alist '("\\.cs\\'" . csharp-mode))
 (add-to-list 'auto-mode-alist '("\\.lua" . lua-mode))
-(add-to-list 'interpreter-mode-alist '("lua" . lua-mode))
 (add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
 (add-to-list 'auto-mode-alist '("README\\.md\\'" . gfm-mode))
@@ -82,10 +84,10 @@
 (column-number-mode t)
 (size-indication-mode t)
 (electric-pair-mode 1)
-(delete-selection-mode 1)
+(delete-selection-mode 0)
 
 ;; code style
-(set-face-foreground 'font-lock-comment-face "gray")
+(set-face-foreground 'font-lock-comment-face "dark gray")
 
 
 ;; set copy line key

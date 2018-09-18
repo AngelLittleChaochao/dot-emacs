@@ -15,6 +15,10 @@
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 (autoload 'ibuffer "ibuffer" "List buffers." t)
 
+# override C-c C-r as revert buffer in python mode
+(add-hook 'python-mode-hook
+	            (lambda () (local-set-key (kbd "\C-c\C-r") 'revert-buffer)))
+
 ;; make emacs to install org
 (require 'package)
 (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") t)

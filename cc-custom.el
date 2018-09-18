@@ -17,7 +17,6 @@
 (require 'js2-mode)
 (require 'lua-mode)
 (setq lua-indent-level 2)
-
 (setq lua-indent-string-contents t)
 
 (require 'markdown-mode)
@@ -29,6 +28,7 @@
 (ido-mode t)
 
 (require 'python-mode)
+(require 'py-yapf)
 
 (defun my-csharp-mode-hook ()
   ;; enable the stuff you want for C# here
@@ -45,3 +45,10 @@
 (autoload 'gfm-mode "markdown-mode"
    "Major mode for editing GitHub Flavored Markdown files" t)
 
+(dolist (hook '(text-mode-hook))
+  (add-hook hook (lambda () (flyspell-mode 1))))
+
+(add-hook 'markdown-mode-hook (lambda ()
+			    (flyspell-mode 1)
+			    ))
+(add-hook 'python-mode-hook 'py-yapf-enable-on-save)

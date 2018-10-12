@@ -15,9 +15,19 @@
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 (autoload 'ibuffer "ibuffer" "List buffers." t)
 
-# override C-c C-r as revert buffer in python mode
+;; override C-c C-r as revert buffer in python mode
 (add-hook 'python-mode-hook
-	            (lambda () (local-set-key (kbd "\C-c\C-r") 'revert-buffer)))
+	  (lambda ()
+	    (local-set-key (kbd "\C-c\C-r") 'revert-buffer)
+	    (local-set-key (kbd "\C-c\C-c") 'comment-region)
+	    (local-set-key (kbd "\C-c\C-u") 'uncomment-region)
+		(setq indent-tabs-mode nil)
+	    (setq-default tab-width 4)
+		(setq python-indent-offset 4)
+		))
+
+
+
 
 ;; make emacs to install org
 (require 'package)

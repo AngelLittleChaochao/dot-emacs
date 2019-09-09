@@ -92,7 +92,7 @@
 
 
 (show-paren-mode 1)
-(menu-bar-mode -1) 
+(menu-bar-mode -1)
 (setq show-paren-delay 0)
 (line-number-mode t)
 (column-number-mode t)
@@ -120,3 +120,5 @@ Position the cursor at it's beginning, according to the current mode."
   (newline-and-indent)
   (forward-line -1)
   (indent-according-to-mode))
+
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
